@@ -1,4 +1,3 @@
-import javax.print.DocFlavor;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
@@ -11,6 +10,7 @@ import java.util.Scanner;
 public class Server1 {
 
     public Server1() {
+
         int port = 13456;
 
         try( ServerSocket server = new ServerSocket(port);
@@ -21,7 +21,7 @@ public class Server1 {
             sc.useDelimiter("[^A-Za-zÄÖÅäöå0-9]");
             while (sc.hasNext()){
                 String word = sc.next();
-                word.trim().toLowerCase();
+                word = word.trim().toLowerCase();
                 if(!word.isEmpty()){
                     out.print(word + " ");
                 }

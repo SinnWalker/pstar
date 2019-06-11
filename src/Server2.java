@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class Server2 {
 
     public Server2() {
+
         int port = 13457;
 
         try(ServerSocket server = new ServerSocket(port);
