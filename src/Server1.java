@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class Server1 {
 
     public Server1() {
+        System.out.println("inside server 1");
         int port = 13456;
 
         try( ServerSocket server = new ServerSocket(port);
@@ -26,6 +27,7 @@ public class Server1 {
                     out.print(word + " ");
                 }
             }
+            System.out.println("server 1 finished");
         }
         catch (Exception e){
             e.printStackTrace();
